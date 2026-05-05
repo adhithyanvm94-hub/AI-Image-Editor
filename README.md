@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=3B82F6&center=true&vCenter=true&width=800&lines=Prompt-Based+Image+Editor;Edit+Images+Using+Natural+Language;No+Tools+Just+Type+Your+Prompt;AI-Powered+Image+Editing" />
+</p>
+
+
 # 🚀 Prompt-Based Image Editor
 
 <p align="center">
