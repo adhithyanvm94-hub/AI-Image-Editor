@@ -32,7 +32,7 @@ Example:
 ## 🖥️ App UI
 
 <p align="center">
-  <img src="./assets/ui.png" width="850"/>
+  <img src="./UI.png" width="850"/>
 </p>
 
 <p align="center">
