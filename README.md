@@ -91,8 +91,8 @@ remove background and change suit to black and crop 4:5
 
 ## 📦 Installation
 
-git clone https://github.com/your-username/prompt-image-editor.git  
-cd prompt-image-editor  
+git clone https://github.com/adhithyanvm94-hub/AI-Image-Editor.git 
+cd AI-Image-Editor  
 
 pip install -r requirements.txt  
 streamlit run app.py  
