@@ -6,92 +6,135 @@
   <img src="https://img.shields.io/badge/HuggingFace-Transformers-yellow?style=for-the-badge&logo=huggingface"/>
 </p>
 
-<hr/>
-
-## 🧠 What this project does
-
-This is a simple app where you can edit images just by typing what you want.
-
-Upload a photo, write something like:  
-**"change background to blue and dress to red"**
-
-…and the app handles the rest.
-
-<hr/>
-
-## ✨ What you can do
-
-### 🎯 Edit with plain English  
-Just type what you want:
-- remove background  
-- change background to white  
-- make shirt black  
-- crop 1:1  
-- resize to 512x512  
-
-You can also combine multiple actions in one prompt.
+<p align="center">
+  <b>Edit images using natural language — no tools, just prompts.</b>
+</p>
 
 ---
 
-### 🎨 Background editing  
-- Remove background  
-- Replace with solid colors  
+## ✨ Overview
+
+This project lets you **edit images by simply describing what you want**.
+
+No complex UI. No manual tools.  
+Just upload → type → get results.
+
+Example:  
+"remove background and change dress to blue and crop 1:1"
 
 ---
-
-### 👕 Change clothes color  
-- Detects clothing automatically  
-- Keeps natural lighting and shading  
-
----
-
-### 📐 Crop & resize  
-- Supports common ratios (1:1, 4:5, 16:9)  
-- Custom sizes also supported  
-
----
-
-### 🧩 Mask preview  
-- View AI-detected regions  
-
-<hr/>
 
 ## 🖥️ App UI
 
 <p align="center">
-  <img src="./assets/ui.png" width="800"/>
+  <img src="./assets/ui.png" width="850"/>
 </p>
 
 <p align="center">
-  <em>Main interface of the Prompt-Based Image Editor</em>
+  <em>Clean Streamlit interface with real-time AI editing</em>
 </p>
 
-<hr/>
+---
 
-## ⚡ How it works
+## ⚡ Features
 
-1. Detects person and clothing using AI  
-2. Generates masks for specific regions  
-3. Applies edits only where needed  
-4. Combines everything into final image  
+- 🎯 Prompt-based editing (multi-action support)  
+- 🎨 Background removal & color replacement  
+- 👕 Clothing recolor with realistic shading  
+- 📐 Smart crop & resize (1:1, 4:5, 16:9, custom)  
+- 🧩 Mask preview for debugging  
+- ⚡ Optimized pipeline (single segmentation pass)  
 
-<hr/>
+---
 
-## 🛠️ Built with
+## 🧠 How it works
 
-- Python  
-- Streamlit  
-- Hugging Face Transformers  
-- OpenCV + PIL  
-- NumPy  
+Upload Image → Enter Prompt → Segmentation Model → Mask Generation → Apply Edits → Final Output
 
-<hr/>
+Under the hood:
+
+- Uses Hugging Face segmentation model  
+- Extracts regions (person, clothes, background)  
+- Applies edits using OpenCV + LAB color blending  
+- Executes multiple actions from a single prompt  
+
+---
+
+## 🧪 Example Prompts
+
+remove background  
+change background to white  
+change dress to red  
+make shirt black  
+crop 1:1  
+resize to 512x512  
+remove background and change suit to black and crop 4:5  
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer            | Tools |
+|------------------|------|
+| Language         | Python |
+| UI               | Streamlit |
+| AI Model         | Hugging Face Transformers |
+| Image Processing | OpenCV, PIL |
+| Data Handling    | NumPy |
+
+---
 
 ## 📦 Installation
 
-```bash
-git clone https://github.com/your-username/prompt-image-editor.git
-cd prompt-image-editor
+git clone https://github.com/your-username/prompt-image-editor.git  
+cd prompt-image-editor  
 
-pip install -r requirements.txt
-streamlit run app.py
+pip install -r requirements.txt  
+streamlit run app.py  
+
+---
+
+## 📥 Output
+
+- High-quality PNG export  
+- Supports transparent background (RGBA)  
+- Preserves lighting and texture  
+
+---
+
+## 🚧 Roadmap
+
+- Multi-person support  
+- Gradient & image backgrounds  
+- Better prompt understanding  
+- Mobile UI improvements  
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome.
+
+Fork the repo → create a branch → open a PR.
+
+---
+
+## 🧑‍💻 Author
+
+Adhithyan VM
+
+---
+
+## ⭐ Support
+
+If you found this useful:
+
+Star the repo  
+Fork it  
+Build something cool  
+
+---
+
+## ⚡ Final Thought
+
+Editing images should feel like talking, not clicking.
